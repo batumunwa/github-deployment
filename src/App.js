@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import StateAndProp from './StateAndProp';
+import { useState } from 'react';
+import Second from './Second';
 
 function App() {
+  const [first, setfirst] = useState('Ezrom')
+  const [email, setemail] = useState('batumunwa@gmail.com')
+  const [exp, setexp] = useState(10)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Ezrom's First React Application
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <StateAndProp 
+      first={first} 
+      email={email}
+      exp = {exp}/>
+
+      <Second 
+      first={first} 
+      email={email}
+      exp = {exp}/>
     </div>
   );
 }
